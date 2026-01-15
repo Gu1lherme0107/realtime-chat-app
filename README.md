@@ -9,7 +9,7 @@ Um aplicativo de **chat em tempo real** fullstack desenvolvido com React, Node.j
 
 ## 🚀 Demo ao Vivo
 
-**[https://realtime-chat-app-judj-qsox694ov-gu1lherme0107s-projects.vercel.app/](#)** *(Link será adicionado após deploy)*
+**[https://realtime-chat-app-judj-qsox694ov-gu1lherme0107s-projects.vercel.app/](#)** 
 
 ---
 
