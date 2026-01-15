@@ -10,21 +10,34 @@ const cors = require('cors');
 const app = express();
 const server = http.createServer(app);
 
-// CORS configuration - apenas aceita origem do frontend
-const io = socketIo(server, {
-  cors: {
-    origin: CLIENT_URL,
-    methods: ['GET', 'POST'],
-    credentials: true
+// CORS configuration - aceita múltiplas origens do Vercel
+const allowedOrigins = [
+  CLIENT_URL,
+  'http://localhost:5173',
+  'https://realtime-chat-app-judj.vercel.app'
+];
+
+// Função para verificar origem
+const corsOptions = {
+  origin: (origin, callback) => {
+    // Permite requisições sem origin (mobile apps, Postman, etc) ou do Vercel
+    if (!origin || allowedOrigins.some(allowed => origin.includes('vercel.app')) || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Bloqueado por CORS'));
+    }
   },
+  methods: ['GET', 'POST'],
+  credentials: true
+};
+
+const io = socketIo(server, {
+  cors: corsOptions,
   transports: ['websocket', 'polling']
 });
 
 // Middleware
-app.use(cors({
-  origin: CLIENT_URL,
-  credentials: true
-}));
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Health check route
