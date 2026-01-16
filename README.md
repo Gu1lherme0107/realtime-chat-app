@@ -194,66 +194,9 @@ realtime-chat-app/
 
 ---
 
-## 🐛 Troubleshooting
-
-### Mensagens aparecem 2x
-- **Solução**: Certificar que listeners estão sendo removidos com `socket.off()`
-
-### Backend não conecta
-- Verificar se CORS está habilitado
-- Confirmar que `CLIENT_URL` está correto no Render
-
-### Mensagens não sincronizam
-- Abrir DevTools → Console para erros
-- Verificar conexão WebSocket na aba Network
-
----
-
-## 🤝 Como Contribuir
-
-1. Faça um Fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
----
-
-## 📈 Roadmap (v2)
-
-- [ ] Autenticação com Login
-- [ ] Salas de chat (channels)
-- [ ] Nome de usuário personalizável
-- [ ] Indicador "digitando..."
-- [ ] Emojis e reações
-- [ ] Histórico persistido em banco (MongoDB)
-- [ ] Dark mode toggle
-- [ ] Notificações de som
-
----
-
 ## 📄 Licença
 
 Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
-## 👨‍💻 Autor
-
-**Guilherme Lima**
-
-- GitHub: [@Gu1lherme0107](https://github.com/Gu1lherme0107)
-- Email: vipgui0606@gmail.com
-- LinkedIn: [Seu LinkedIn](#)
-
----
-
-## ⭐ Se Gostou
-
-Se este projeto foi útil para você, considere dar uma ⭐ no GitHub!
-
----
-
-## 📞 Suporte
-
-Tem dúvidas? Abra uma [Issue](https://github.com/Gu1lherme0107/realtime-chat-app/issues) ou entre em contato!
